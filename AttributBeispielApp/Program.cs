@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace AttributBeispielApp
@@ -31,7 +33,33 @@ namespace AttributBeispielApp
                 $"{fullNameMethod?.Invoke(schroedi, null) ?? "-"}");
 
             // Uebung 2
-            //GetAuthorInfo(typeof(Person));
+            GetAuthorInfo(typeof(Person));
+        }
+        static void GetAuthorInfo(Type t)
+        {
+            IEnumerable<AuthorAttribute> attr = t.GetCustomAttributes<AuthorAttribute>();
+            if (attr != null && attr.Any())
+            {
+                Console.WriteLine("Klassenautoren:");
+                foreach (var a in attr)
+                {
+                    Console.WriteLine($"Klassenautor: {a.Name}; Version {a.Version}");
+                }
+            }
+            Console.WriteLine("Methodenautoren");
+            foreach (var method in t.GetMethods())
+            {                
+                IEnumerable<AuthorAttribute> attributes =
+                    method.GetCustomAttributes<AuthorAttribute>();
+                if (attributes != null && attributes.Any())
+                {
+                    Console.WriteLine($"Autoren der Methode {method.Name}");
+                    foreach (var a in attributes)
+                    {
+                        Console.WriteLine($"Methodenautor: {a.Name}; Version {a.Version}");
+                    }
+                }
+            }
         }
     }
 }
