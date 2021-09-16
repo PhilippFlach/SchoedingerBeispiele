@@ -107,7 +107,9 @@ namespace SchroedingerParallelPI
                         local += 4.0 / (1.0 + x * x);
                     }
                     return local;
-                }, local => { lock (locker) sum += local; });
+                },             
+            // das localFinally kann auch weggelassen werden
+            localFinally: local => { lock (locker) sum += local; });
             return step * sum;
         }
     }
