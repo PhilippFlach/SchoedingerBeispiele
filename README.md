@@ -15,7 +15,7 @@ Dies ist die Formel:
 
 Herleitung: 
 
-Integraldarstellung der arcTan- Funktion:
+Integral von 1/ (1+x2) ist ja gerade die arctan - Funktion (Beweis durch Ableitung der arctan-Funktion mit dem Trick Ableitung tan(arctan(x)) = x und Kettenregel):
 
 ![image](https://user-images.githubusercontent.com/37941333/133686845-ee40a235-63e3-4d24-8d14-1c844e01923e.png)
 
