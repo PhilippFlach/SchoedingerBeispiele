@@ -56,5 +56,31 @@ namespace SchroedingerParallelPI.Tests
             //Assert
             Assert.AreEqual(PIApprox, PIBerechnet, 0.00005);
         }
+
+        [Test()]
+        public void ParallelPiTest()
+        {
+            // Arrange
+            double PIBerechnet;
+
+            //Act
+            PIBerechnet = PIBerechnenParallelVarianten.ParallelPi();
+
+            //Assert
+            Assert.AreEqual(PIApprox, PIBerechnet, 0.00005);
+        }
+
+        [Test()]
+        public void ParallelPartitionerPiTest()
+        {
+            // Arrange
+            double PIBerechnet;
+
+            //Act
+            PIBerechnet = PIBerechnenParallelVarianten.ParallelPartitionerPi();
+
+            //Assert
+            Assert.AreEqual(PIApprox, PIBerechnet, 0.00005);
+        }
     }
 }
