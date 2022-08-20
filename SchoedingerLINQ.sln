@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchroedingerParallelPI", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchroedingerParallelPITests", "SchroedingerParallelPITests\SchroedingerParallelPITests.csproj", "{FD0563C3-24B8-4E32-A972-7165031A5FB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProducerConsumer", "ProducerConsumer\ProducerConsumer.csproj", "{45108DB3-7FF6-4ED0-8040-14AF807CC767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FD0563C3-24B8-4E32-A972-7165031A5FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD0563C3-24B8-4E32-A972-7165031A5FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD0563C3-24B8-4E32-A972-7165031A5FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45108DB3-7FF6-4ED0-8040-14AF807CC767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45108DB3-7FF6-4ED0-8040-14AF807CC767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45108DB3-7FF6-4ED0-8040-14AF807CC767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45108DB3-7FF6-4ED0-8040-14AF807CC767}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
